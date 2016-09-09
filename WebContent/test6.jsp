@@ -46,7 +46,7 @@
 		
 		//创建请求结果处理程序
 		xmlhttp.onreadystatechange=processReuqest;   //回调函数
-		var str = document.getElementById("txtSearch").value;
+		var str = encodeURI(encodeURI(document.getElementById("txtSearch").value));
 		
 		xmlhttp.open("POST","SearchSuggest.jsp?search="+str,true);
 		xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
